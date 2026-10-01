@@ -5,6 +5,7 @@ answer_key = pd.DataFrame([
         "deal_id": 1,
         "acquirer": "Pfizer Inc.",
         "target": "Wyeth",
+        "parties": ["Pfizer Inc.", "Wyeth"],
 
         "name_change_occurred": False,
         "name_change_date": None,
@@ -28,6 +29,7 @@ answer_key = pd.DataFrame([
         "deal_id": 2,
         "acquirer": "Merck & Co., Inc. (Old Merck)",
         "target": "Schering-Plough Corporation",
+        "parties": ["Merck & Co., Inc. (Old Merck)", "Schering-Plough Corporation"],
 
         "name_change_occurred": True,
         "name_change_date": "2009-11-03",
@@ -51,6 +53,7 @@ answer_key = pd.DataFrame([
         "deal_id": 3,
         "acquirer": "Roche",
         "target": "Genentech, Inc.",
+        "parties": ["Roche", "Genentech, Inc."],
 
         "name_change_occurred": False,
         "name_change_date": None,
@@ -73,6 +76,7 @@ answer_key = pd.DataFrame([
         "deal_id": 4,
         "acquirer": "Sanofi-Aventis",
         "target": "Genzyme Corporation",
+        "parties": ["Sanofi-Aventis", "Genzyme Corporation"],
 
         "name_change_occurred": True,
         "name_change_date": "2011-06-15",
@@ -95,6 +99,7 @@ answer_key = pd.DataFrame([
         "deal_id": 5,
         "acquirer": "Gilead Sciences, Inc.",
         "target": "Pharmasset, Inc.",
+        "parties": ["Gilead Sciences, Inc.", "Pharmasset, Inc."],
 
         "name_change_occurred": False,
         "name_change_date": None,
@@ -117,6 +122,7 @@ answer_key = pd.DataFrame([
         "deal_id": 6,
         "acquirer": "Actavis plc",
         "target": "Allergan, Inc.",
+        "parties": ["Actavis plc", "Allergan, Inc."],
 
         "name_change_occurred": True,
         "name_change_date": "2015-06-15",
@@ -133,12 +139,13 @@ answer_key = pd.DataFrame([
         "public_status_source": "https://www.prnewswire.com/news-releases/actavis-completes-allergan-acquisition-300051633.html",
         "name_source": "https://www.prnewswire.com/news-releases/actavis-plc-is-now-allergan-plc-300098692.html",
 
-        "notes": None
+        "notes": "Actavis plc changed its name to Allergan plc in 2015, after the acquisition of Allergan, Inc."
     },
     {
         "deal_id": 7,
         "acquirer": "Teva Pharmaceutical Industries Ltd.",
         "target": "Allergan's global generics business",
+        "parties": ["Teva Pharmaceutical Industries Ltd.", "Allergan plc"],
         
         "name_change_occurred": False,
         "name_change_date": None,
@@ -161,6 +168,7 @@ answer_key = pd.DataFrame([
         "deal_id": 8,
         "acquirer": "Johnson & Johnson",
         "target": "Actelion Ltd.",
+        "parties": ["Johnson & Johnson", "Actelion Ltd."],
         
         "name_change_occurred": False,
         "name_change_date": None,
@@ -183,7 +191,8 @@ answer_key = pd.DataFrame([
         "deal_id": 9,
         "acquirer": None,
         "target": None,
-        
+        "parties":['Valeant Pharmaceuticals International, Inc.'],    
+
         "name_change_occurred": True,
         "name_change_date": "2018-07-13",
         "resulting_public_company_name": "Bausch Health Companies Inc.",
@@ -205,7 +214,8 @@ answer_key = pd.DataFrame([
         "deal_id": 10,
         "acquirer": "Takeda Pharmaceutical Company Limited",
         "target": "Shire plc",
-        
+        "parties": ["Takeda Pharmaceutical Company Limited", "Shire plc"],
+
         "name_change_occurred": False,
         "name_change_date": None,
         "resulting_public_company_name": "Takeda Pharmaceutical Company Limited",
@@ -221,13 +231,14 @@ answer_key = pd.DataFrame([
         "public_status_source": "https://www.takeda.com/newsroom/shire-news-releases/2019/qppcx8/",
         "name_source": None,
 
-        "notes": "Acquistion took place under scheme of arrangement"
+        "notes": "Acquisition took place under scheme of arrangement"
     },
     {
         "deal_id": 11,
         "acquirer": "Bristol-Myers Squibb Company",
         "target": "Celgene Corporation",
-        
+        "parties": ["Bristol-Myers Squibb Company", "Celgene Corporation"],
+
         "name_change_occurred": False,
         "name_change_date": None,
         "resulting_public_company_name": "Bristol-Myers Squibb Company",
@@ -249,7 +260,8 @@ answer_key = pd.DataFrame([
         "deal_id": 12,
         "acquirer": "AbbVie Inc.",
         "target": "Allergan plc",
-        
+        "parties": ["AbbVie Inc.", "Allergan plc"],
+
         "name_change_occurred": False,
         "name_change_date": None,
         "resulting_public_company_name": "AbbVie Inc.",
@@ -265,13 +277,14 @@ answer_key = pd.DataFrame([
         "public_status_source": "https://news.abbvie.com/2020-05-08-AbbVie-Completes-Transformative-Acquisition-of-Allergan",
         "name_source": None,
 
-        "notes": "Acquistion took place under scheme of arrangement; not a conventional merger"
+        "notes": "Acquisition took place under scheme of arrangement; not a conventional merger"
     },
     {
         "deal_id": 13,
         "acquirer": None,
         "target": None,
-        
+        "parties": ["Mylan N.V.", "Pfizer Inc."],
+
         "name_change_occurred": True,
         "name_change_date": "2020-11-16",
         "resulting_public_company_name": "Viatris inc.",
@@ -287,13 +300,14 @@ answer_key = pd.DataFrame([
         "public_status_source": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-completes-transaction-combine-its-upjohn-business",
         "name_source": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-completes-transaction-combine-its-upjohn-business",
 
-        "notes": "There is no clear cut acquirer-target relationship in this deal. Mylan and Upjohn both combined to form Viatris"
+        "notes": "There is no clear cut acquirer-target relationship in this deal. Mylan and Upjohn, division under Pfizer, both combined to form Viatris"
     },
 
     {
         "deal_id": 14,
         "acquirer": "AstraZeneca PLC",
         "target": "Alexion Pharmaceuticals, Inc.",
+        "parties": ["AstraZeneca PLC", "Alexion Pharmaceuticals, Inc."],
 
         "name_change_occurred": False,
         "name_change_date": None,
@@ -317,6 +331,7 @@ answer_key = pd.DataFrame([
         "deal_id": 15,
         "acquirer": "Amgen Inc.",
         "target": "Horizon Therapeutics plc",
+        "parties": ["Amgen Inc.", "Horizon Therapeutics plc"],
         
         "name_change_occurred": False,
         "name_change_date": None,
@@ -340,6 +355,7 @@ answer_key = pd.DataFrame([
         "deal_id": 16,
         "acquirer": "Pfizer Inc.",
         "target": "Seagen Inc.",
+        "parties": ["Pfizer Inc.", "Seagen Inc."],
         
         "name_change_occurred": False,
         "name_change_date": None,

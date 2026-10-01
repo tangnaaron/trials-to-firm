@@ -43,7 +43,8 @@ method being tested.
 | Column | Description |
 |---|---|
 | `deal_id` | Case identifier (1–16) |
-| `acquirer`, `target` | Parties to the deal (blank for the control case) |
+| `acquirer`, `target` | Acquirer and target (blank where there is no clear acquirer–target relationship, i.e. the control case and Mylan/Upjohn) |
+| `parties` | List of all public companies involved, filled for every case (e.g. `['Mylan N.V.', 'Pfizer Inc.']`); for a divested business unit, its public parent is listed |
 | `name_change_occurred` | Whether the surviving public company changed its name |
 | `name_change_date` | Date the name change took effect |
 | `resulting_public_company_name` | Name of the public company that carried on after the deal (fact 4)|
@@ -55,7 +56,8 @@ method being tested.
 | `notes` | Deal structure details and caveats |
 
 All dates are formatted `YYYY-MM-DD`; a blank cell means the fact does not
-apply to that case.
+apply to that case. `parties` is stored in the CSV as a Python list literal;
+parse it with `ast.literal_eval` after reading.
 
 ## Reproducibility
 
