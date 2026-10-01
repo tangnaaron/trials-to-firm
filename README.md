@@ -38,28 +38,6 @@ where the original page is gone), exchange notices (e.g. Nasdaq Trader), or
 company reports, never from SEC filings, so that the key is independent of the
 method being tested.
 
-The test cases include standard acquisitions as well as deliberately harder
-cases:
-
-| deal_id | Case | Why it is included |
-|---|---|---|
-| 1 | Pfizer / Wyeth | Standard acquisition |
-| 2 | Merck / Schering-Plough | Reverse merger; the target survived and took the acquirer's name |
-| 3 | Roche / Genentech | Foreign acquirer buying out a U.S.-listed subsidiary |
-| 4 | Sanofi-Aventis / Genzyme | Acquirer renamed itself (to Sanofi) after the deal |
-| 5 | Gilead / Pharmasset | Tender offer |
-| 6 | Actavis / Allergan, Inc. | Acquirer renamed itself (to Allergan plc) after the deal |
-| 7 | Teva / Allergan generics | Business-unit purchase; no public company ceased trading |
-| 8 | Johnson & Johnson / Actelion | Foreign (SIX-listed) target; delisting months after closing |
-| 9 | Valeant → Bausch Health | Control case: name change with no acquisition |
-| 10 | Takeda / Shire | Scheme of arrangement |
-| 11 | Bristol-Myers Squibb / Celgene | Standard acquisition |
-| 12 | AbbVie / Allergan plc | Scheme of arrangement |
-| 13 | Mylan + Upjohn → Viatris | Combination with no clear acquirer or target |
-| 14 | AstraZeneca / Alexion | Foreign acquirer |
-| 15 | Amgen / Horizon | Irish target; delisting date differs from closing date |
-| 16 | Pfizer / Seagen | Delisting date differs from closing date |
-
 `data/answer_key.csv` has one row per case with the following columns:
 
 | Column | Description |
@@ -68,9 +46,9 @@ cases:
 | `acquirer`, `target` | Parties to the deal (blank for the control case) |
 | `name_change_occurred` | Whether the surviving public company changed its name |
 | `name_change_date` | Date the name change took effect |
-| `resulting_public_company_name` | Name of the public company that carried on after the deal |
-| `public_company_that_ceased_trading` | Company that stopped being publicly traded (blank if none) |
-| `ceased_public_date` | Date that company ceased to be public |
+| `resulting_public_company_name` | Name of the public company that carried on after the deal (fact 4)|
+| `public_company_that_ceased_trading` | Company that stopped being publicly traded  |
+| `ceased_public_date` | Date that company ceased to be public (fact 3)|
 | `agreement_date` | Date the deal was agreed (fact 1) |
 | `closing_date` | Date the deal closed (fact 2) |
 | `agreement_source`, `closing_source`, `public_status_source`, `name_source` | URL supporting each fact |
